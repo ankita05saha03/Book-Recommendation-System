@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            min-height: 100vh;
+            background-color: #e5e5f7;
+        }
+
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e5f7;
+            opacity: 0.6;
+            background-size: 24px 24px;
+            background-image: repeating-linear-gradient(0deg, #7400b8, #7400b8 1.2px, #e5e5f7 1.2px, #e5e5f7);
+            z-index: -1;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #7400b8;
+            font-size: 18px;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #c8b6ff;
+        }
+
+        .animated-gradient-header {
+            background: linear-gradient(45deg, #7400b8, #c77dff, #e0aaff, #5e60ce);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .animated-gradient-header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .books-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .book-item {
+            flex: 1 1 calc(20% - 20px);
+            margin: 10px;
+            text-align: center;
+            max-width: calc(20% - 20px);
+        }
+
+        .book-item img {
+            width: 150px;
+            height: 200px;
+        }
+
+        .book-item p {
+            margin: 5px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/top_books">Top Books</a></li>
+        <li><a href="/recommend">Recommendation</a></li>
+    </ul>
+    <header class="animated-gradient-header">
+        <h1>TOP BOOKS</h1>
+    </header>  
+    <div class="books-container">
+        {% for i in range(book_name|length) %}
+            <div class="book-item">
+                <img class="card-img-top" src="{{ image[i] }}" alt="{{ book_name[i] }}">
+                <p>{{ book_name[i] }}</p>
+                <h4>{{ author[i] }}</h4>
+                <h4>Votes - {{ votes[i] }}</h4>
+                <h4>Rating - {{ rating[i] }}</h4>
+            </div>
+            {% if (i + 1) % 5 == 0 %}
+                </div><div class="books-container">
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

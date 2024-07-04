@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0 0 40px 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('https://t4.ftcdn.net/jpg/08/07/53/79/360_F_807537945_wzZNgdoh57CtEtTwMD3XslbktsHUQaf1.jpg');
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #7400b8;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #c8b6ff;
+        }
+
+        h2 {
+            color: black;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .animated-gradient-header {
+            background: linear-gradient(45deg, #7400b8, #c77dff, #e0aaff, #5e60ce);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .animated-gradient-header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #about-section {
+            background: #fff;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        #about-section h2 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+            font-size: 22px;
+        }
+
+        #about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .feature, .tech-stack {
+            margin-bottom: 20px;
+        }
+
+        .feature h3, .tech-stack h3 {
+            margin-bottom: 10px;
+        }
+
+        ul.features, ul.tech-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.features li, ul.tech-list li {
+            background: #7400b8;
+            color: white;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        ul.features li:hover, ul.tech-list li:hover {
+            background: #9823dc;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 220px;
+            background-color: #e0aaff;
+            color: #000000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 105%; /* Position the tooltip to the right */
+            margin-top: -30px; /* Center the tooltip vertically */
+            opacity: 0;
+            transition: opacity 0.3s;
+            }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            }
+
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/top_books">Top Books</a></li>
+        <li><a href="/recommend">Recommendation</a></li>
+    </ul>
+    <header class="animated-gradient-header">
+        <h1>BOOK RECOMMNEDATION SYSTEM</h1>
+    </header>      
+    <div class="container">
+        <section id="about-section">
+            <h2>Project Overview</h2>
+            <p>
+                The Book Recommendation System is designed to help users find books they might enjoy based on their reading preferences. It uses collaborative filtering to suggest books similar to those a user has liked in the past.
+            </p>
+            <div class="feature">
+                <h3>Key Features</h3>
+                <ul class="features">
+                    <li>Personalized Book Recommendations</li>
+                    <li>Top 50 Popular Books</li>
+                    <li>Detailed Book Information</li>
+                    <li>User-Friendly Interface</li>
+                </ul>
+            </div>
+            <div class="tech-stack">
+                <h3>Technology Stack</h3>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>Pandas & NumPy</li>
+                    <li>Pickle</li>
+                    <li>HTML & CSS</li>
+                </ul>
+            </div>
+            <h2>How It Works</h2>
+            <p>
+                The recommendation system uses a collaborative filtering algorithm to analyze the user's reading history and preferences. Based on this data, it suggests books that are similar to those the user has enjoyed. The system uses precomputed similarity scores to make the recommendations efficient and fast.
+            </p>
+            <div class="contact">
+                <center>
+                    <h2>Contact Information</h2>
+                    <p>For more information or inquiries, please contact us at <span class="tooltip">info@bookrecsys.com<span class="tooltiptext">This is a fake email for demonstration purposes</span></span></p>
+                </center>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

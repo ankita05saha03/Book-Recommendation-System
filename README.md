@@ -15,7 +15,14 @@ https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
 
 # Model and Techniques
 
-The project employs collaborative filtering and cosine similarity for generating book recommendations. The filtering process only considers users who have voted over 200 times and books with a minimum of 50 ratings
-to ensure quality and reliability of recommendations. Cosine similarity is used to find similar books based on user ratings, enhancing the accuracy and relevance of the recommendations.
+The project employs collaborative filtering and cosine similarity for generating book recommendations. The filtering process only considers users who have voted over 200 times and books with a minimum of 50 ratings to ensure quality and reliability of recommendations. Cosine similarity is used to find similar books based on user ratings, enhancing the accuracy and relevance of the recommendations.
 
 # Results
+
+![Screenshot (935)](https://github.com/ankita05saha03/Book-Recommendation-System/assets/143898335/4d322366-c0c1-4587-84f4-c2d595fa270f)
+
+![Screenshot (936)](https://github.com/ankita05saha03/Book-Recommendation-System/assets/143898335/5532f9b9-ecf7-448c-b325-e0aef9f22fff)
+
+![Screenshot (937)](https://github.com/ankita05saha03/Book-Recommendation-System/assets/143898335/a2c5bc80-0081-48cf-94a6-9e1c6102d490)
+
+![Screenshot (938)](https://github.com/ankita05saha03/Book-Recommendation-System/assets/143898335/ba4c9677-c8fc-44d6-ab2e-fc73da78d943)
